@@ -92,6 +92,8 @@ class AudioPlayerHandler extends BaseAudioHandler {
             artUri: Uri.parse(artwork_),
             artHeaders: artHeaders,
           ));
+          playbackState.add(playbackState.value
+              .copyWith(updatePosition: const Duration(milliseconds: 0)));
         } else if (topic == 'player.duration_changed') {
           List<dynamic> args = json.decode(data);
           double durationSeconds = args[0];

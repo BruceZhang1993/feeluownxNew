@@ -159,6 +159,9 @@ class _PlayerControlPanelState extends State<PlayerControlPanel> {
         androidNotificationChannelId: 'io.github.feeluown',
         androidNotificationChannelName: 'FeelUOwn',
         androidNotificationOngoing: true,
+        androidNotificationClickStartsActivity: true,
+        androidNotificationChannelDescription: '音乐播放通知',
+        androidStopForegroundOnPause: true,
       ),
     );
   }
